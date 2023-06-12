@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const asanaCards = document.getElementByID('asanaCards');
+    const asanaCards = document.getElementById('asanaCards');
 
     fetch(`http://localhost:3000/asanas`)
     .then(response => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('learn-more-btn')
             button.id = asana.id
             button.textContent = 'Learn More!'
-            card.appendChild('button')
+            card.appendChild(button)
 
             button.addEventListener('click', () => {
                 // add functionality to bring up a pop-up window that displays more information about the asana
