@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const asanaCards = document.getElementsByID('asanaCards');
 
     fetch(`http://localhost:3000/asanas`)
-    .then(resp => {
+    .then(response => {
         if (!response.ok) {
             throw new Error ('Network response was not ok');
         }
@@ -26,10 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const button = document.createElement('button')
             button.classList.add('learn-more-btn')
-            button.textConte4nt = 'Learn More!'
+            button.id = asana.id
+            button.textContent = 'Learn More!'
             card.appendChild('button')
 
-        })
-        
+            button.addEventListener('click', () => {
+                // add functionality to bring up a pop-up window that displays more information about the asana
+            })
+            
+
+            asanaCards.appendChild(card)
+        })        
     })
 })
