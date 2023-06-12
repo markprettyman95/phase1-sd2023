@@ -4,3 +4,33 @@ body {
     background-color: black;
     color: white;
 }
+
+.floating-header {
+    display: flex;
+    justify-content: center;
+    background: #19235f;
+    opacity: .8;
+    height: 7rem;
+    padding: 1rem;
+}
+
+#asanaCards {
+    margin: 2 rem;
+}
+
+.card {
+    text-align: center;
+    border: hsl(320, 94%, 56%);
+    padding: 1 rem;
+    width: 15 rem;
+    height: 25 rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #ffffff; 
+}
+
+.asana-pic {
+    justify-self: center;
+    height: 12rem;
+    width: auto;
+}

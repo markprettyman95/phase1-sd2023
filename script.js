@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const asanaCards = document.getElementsByID('asanaCards');
+    const asanaCards = document.getElementByID('asanaCards');
 
     fetch(`http://localhost:3000/asanas`)
     .then(response => {
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const img = document.createElement('img')
             img.src = asana.image
-            img.classList.add('toy-avatar')
-            card.appendChild(p)
+            img.classList.add('asana-pic')
+            card.appendChild(img)
 
             const button = document.createElement('button')
             button.classList.add('learn-more-btn')
