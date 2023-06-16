@@ -20,17 +20,48 @@ body {
 
 .card {
     text-align: center;
-    border: hsl(320, 94%, 56%);
+    border: 2mm ridge #19235f ;
     padding: 1 rem;
     width: 15 rem;
     height: 25 rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #ffffff; 
+    box-shadow: 5px 7px #ffffffa1; 
 }
 
 .asana-pic {
     justify-self: center;
     height: 12rem;
     width: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+#aboutBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    background-color: #19235f;
+    color: wheat;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#aboutBtn:hover {
+    background-color: #314278;
+}
+
+.learn-more-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    background-color: #19235f;
+    color: wheat;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
 }
