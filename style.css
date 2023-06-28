@@ -24,8 +24,9 @@ body {
     margin-bottom: 1rem;
 }
 
-.aboutSection {
-    margin-top: 1rem;
+.width-video {
+    width: 100%;
+    object-fit: fill;
 }
 
 #asanaCards {
