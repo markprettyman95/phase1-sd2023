@@ -1,27 +1,63 @@
 body {
     margin: 0;
     font-family: "Gill Sans", sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #e3e3db;
+    color: #060606;
 }
 
 .floating-header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background: #19235f;
+    background: #e3e3db;
     opacity: .8;
-    height: 12rem;
+    height: 7rem;
     padding: 1rem;
 }
-
-.title-wrapper {
-    margin-bottom: 1rem;
+  
+.logo {
+    display: inline-block;
+    height: 100px; 
+}
+  
+.logo img {
+    width: auto;
+    height: 100%; 
 }
 
-.search {
-    margin-bottom: 1rem;
+.hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.hamburger img {
+    width: 35px; 
+    height: auto; 
+}
+
+.video-container {
+    position: relative;
+  }
+  
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+  
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #e3e3db;
+    z-index: 2;
+}
+  
+.text-overlay h1 {
+    font-size: 40px;
 }
 
 .width-video {
@@ -35,11 +71,11 @@ body {
 
 .card {
     text-align: center;
-    border: 2mm ridge #19235f ;
+    border: 2mm ridge #060606 ;
     padding: 1rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 5px 7px #ffffffa1; 
+    box-shadow: 5px 7px #e3e3db; 
 }
 
 .asana-pic {
@@ -52,11 +88,19 @@ body {
     display: none;
 }
 
+#aboutInfo {
+    position: relative;
+    padding: 1em 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+}
+
 #aboutBtn {
     display: block;
     margin: 0 auto;
     padding: 0.5rem 1rem;
-    background-color: #19235f;
+    background-color: #060606;
     color: wheat;
     border: none;
     border-radius: 4px;
@@ -64,17 +108,21 @@ body {
     cursor: pointer;
 }
 #aboutBtn:hover {
-    background-color: #314278;
+    background-color: #1d1d1d;
 }
 
 .learn-more-btn {
     display: block;
     margin: 0 auto;
     padding: 0.5rem 1rem;
-    background-color: #19235f;
+    background-color: #060606;
     color: wheat;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background-color: #1d1d1d;
 }
