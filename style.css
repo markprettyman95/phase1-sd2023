@@ -17,7 +17,7 @@ body {
   
 .logo {
     display: inline-block;
-    height: 100px; 
+    height: 150px;
 }
   
 .logo img {
@@ -30,11 +30,13 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin-right: 1rem;
-}
-
-.hamburger img {
-    width: 35px; 
-    height: auto; 
+    padding: 0.5rem 1rem;
+    background-color: #e3e3db;
+    color: #060606;
+    border: none;
+    border-radius: 3px;
+    font-size: 3rem;
+    cursor: pointer;
 }
 
 .video-container {
@@ -107,6 +109,7 @@ body {
     font-size: 1rem;
     cursor: pointer;
 }
+
 #aboutBtn:hover {
     background-color: #1d1d1d;
 }
