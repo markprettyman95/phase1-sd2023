@@ -16,39 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
         const asanas = data
+        const randomIndex = Math.floor(Math.random() * asanas.length)
+        const randomAsana = asanas[randomIndex]
 
         asanas.forEach(asana => {
-            const card = document.createElement('div')
-            card.classList.add('card')
+            if (asana === randomAsana) {
+                const card = document.createElement('div')
+                card.classList.add('card')
 
-            const h2 = document.createElement('h2')
-            h2.textContent = asana.name
-            card.appendChild(h2)
+                const h2 = document.createElement('h2')
+                h2.textContent = asana.name
+                card.appendChild(h2)
 
-            const img = document.createElement('img')
-            img.src = asana.image
-            img.classList.add('asana-pic')
-            card.appendChild(img)
+                const img = document.createElement('img')
+                img.src = asana.image
+                img.classList.add('asana-pic')
+                card.appendChild(img)
 
-            const info = document.createElement('p')
-            info.classList.add('info')
-            info.textContent = asana.info
-            card.appendChild(info)
+                const info = document.createElement('p')
+                info.classList.add('info')
+                info.textContent = asana.info
+                card.appendChild(info)
 
 
-            const button = document.createElement('button')
-            button.classList.add('learn-more-btn')
-            button.id = asana.id
-            button.textContent = "Let's Do It!"
-            card.appendChild(button)
+                const button = document.createElement('button')
+                button.classList.add('learn-more-btn')
+                button.id = asana.id
+                button.textContent = "Let's Do It!"
+                card.appendChild(button)
 
-            button.addEventListener('click', () => {
-                // add functionality to bring up a pop-up window that displays more information about the asana
-            })
+                button.addEventListener('click', () => {
+                
+                })
             
 
-            asanaCards.appendChild(card)
-        })        
+                asanaCards.appendChild(card)
+            }        
+        })
     })
 })
-
