@@ -8,21 +8,31 @@
     <link href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <script defer src="menu.js"></script>
 </head>
 <body>
     <header class="floating-header">
         <a href="index.html" class="logo">
             <img src="/Users/markiesmyname/Documents/Development/code/phase-1/phase1-sd2023/asana.png" alt="Logo">
         </a>
-        <button class="hamburger">≡</button>
+        <button class="hamburger" id="hamburgerBtn">≡</button>
     </header>
+    <div id="menu" class="menu">
+        <button class="menu-button">Home</button>
+        <button class="menu-button">About Us</button>
+        <button class="menu-button">Asana Directory</button>
+        <button class="menu-button">Contact</button>
+        <button class="menu-button">Close</button>
+    </div>
     <div class="video-container">
-        <video autoplay loop playsinline preload="auto" id="hero-video" alt="Ambient yoga scenery." class="width-video" muted>
-            <source src=/Users/markiesmyname/Documents/Development/code/phase-1/phase1-sd2023/hero-movie.mp4 type="video/mp4" >
-            Your browser does not support the video tag.
-        </video>
-        <div class="text-overlay">
-            <h1>wellness. made for you.</h1>
+        <div class="video-overlay">
+            <video autoplay loop playsinline preload="auto" id="hero-video" alt="Ambient yoga scenery." class="width-video" muted>
+                <source src=/Users/markiesmyname/Documents/Development/code/phase-1/phase1-sd2023/hero-movie.mp4 type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-overlay">
+                <h1>wellness. made for you.</h1>
+            </div>
         </div>
     </div>
         <button id="aboutBtn">About Us</button>

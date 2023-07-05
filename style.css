@@ -39,6 +39,39 @@ body {
     cursor: pointer;
 }
 
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.menu.show {
+    transform: translateX(0);
+}
+
+.menu-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.video-overlay.blur video {
+    filter: blur(5px); 
+}
+
 .video-container {
     position: relative;
   }
@@ -55,7 +88,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #e3e3db;
-    z-index: 2;
+    z-index: 1;
 }
   
 .text-overlay h1 {
