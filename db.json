@@ -4,31 +4,36 @@
         "id": 1,
         "name": "ŚĪRṢĀSANA (Headstand)",
         "image": "https://pocketyoga.com/assets/images/full/HeadstandTripod.png",
-        "info": "Also known as the headstand, ŚĪRṢĀSANA is a powerful yoga asana that bring numerous benefits to your body! In this pose, the body is inverted, rooted to the ground by forearms and the crown of the head."
+        "info": "Also known as the headstand, ŚĪRṢĀSANA is a powerful yoga asana that bring numerous benefits to your body! In this pose, the body is inverted, rooted to the ground by forearms and the crown of the head.",
+        "link": "https://www.youtube.com/watch?v=CdWD9_GREkM"
       },
       {
         "id": 2,
         "name": "HALĀSANA (Plow)",
         "image": "https://pocketyoga.com/assets/images/full/Plow.png",
-        "info": "HALĀSANA is a rejuvenating asana that stretches your entire back body and activates your internal organs. It involves lying flat on the back and lifting legs and torso to touch toes on the ground behind the head."
+        "info": "HALĀSANA is a rejuvenating asana that stretches your entire back body and activates your internal organs. It involves lying flat on the back and lifting legs and torso to touch toes on the ground behind the head.",
+        "link": "https://www.youtube.com/watch?v=guM2w_i55Vw"
       },
       {
         "id": 3,
         "name": "PASCHIMOTHANĀSANA (Seated Forward Bend)",
         "image": "https://www.yogaclassplan.com/wp-content/uploads/2021/06/23-seatedforward.jpg",
-        "info": "PASCHIMOTHANĀSANA or the seated forward bend, is a forward folding pose that targets the entire back of the body, from the head to the heels. It is only practiced sitting down, with legs extended forward at a 45 degree angle."
+        "info": "PASCHIMOTHANĀSANA or the seated forward bend, is a forward folding pose that targets the entire back of the body, from the head to the heels. It is only practiced sitting down, with legs extended forward at a 45 degree angle.",
+        "link": "https://www.youtube.com/watch?v=YvdQj-aH9eA"
       },
       {
         "id": 4,
         "name": "BHUJAṄGĀSANA (Cobra)",
         "image": "https://pocketyoga.com/assets/images/full/cobra_full.png",
-        "info": "The Cobra, or BHUJAṄGĀSANA, is one of the most common asanas most people recognize and attribute to yoga. This is a gentle backbend that stretches the spine and opens the chest. In this pose, the practitioner lies on the stomach and lifts the upper body through outstretched arms, rooting at the ground through the hands."
+        "info": "The Cobra, or BHUJAṄGĀSANA, is one of the most common asanas most people recognize and attribute to yoga. This is a gentle backbend that stretches the spine and opens the chest. In this pose, the practitioner lies on the stomach and lifts the upper body through outstretched arms, rooting at the ground through the hands.",
+        "link": "https://www.youtube.com/watch?v=Lfd0HT2dr6Y"
       },
       {
         "id": 5,
         "name": "ARDHA MATSYENDRĀSANA (Half Lord of the Fishes)",
         "image": "https://pocketyoga.com/assets/images/full/LordOfTheFishesHalf_L.png",
-        "info": "This commonly used asana is a seated spinal tiwst that helps detoxify and energize the body. It is done seated, with leg outstreched and the other leg's knee brought to the chest. The upper body twists towards this knee while keeping the lower body grounded."
+        "info": "This commonly used asana is a seated spinal tiwst that helps detoxify and energize the body. It is done seated, with leg outstreched and the other leg's knee brought to the chest. The upper body twists towards this knee while keeping the lower body grounded.",
+        "link": "https://www.youtube.com/watch?v=whefpC77tec"
       }
     ]
 }

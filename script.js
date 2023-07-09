@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.appendChild(button)
 
                 button.addEventListener('click', () => {
-                
+                    window.open(asana.link, '_blank');
                 })
             
 
