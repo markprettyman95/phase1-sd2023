@@ -48,7 +48,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -63,9 +63,18 @@ body {
     margin: 10px;
     padding: 10px 20px;
     background-color: white;
-    color: black;
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.menu-button:hover {
+    text-decoration:underline;
 }
 
 .video-overlay.blur video {

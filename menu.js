@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonText = button.textContent.trim()
             if (buttonText === 'Close') {
                 closeMenu()
+            } else if (buttonText === 'Home') {
+                window.location.href = 'index.html'
             } else {
                 const targetID = button.textContent.toLowerCase().replace(' ', '-')
                 const targetElement = document.getElementById(targetID)
