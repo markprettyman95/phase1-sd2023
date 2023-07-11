@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'index.html'
             } else if (buttonText === 'Asana Directory') {
                 displayAsanas()
+            } else if (buttonText === 'About Us') {
+                creatorInfo.classList.toggle('hidden')
+                closeMenu()
             } else {
                 const targetID = button.textContent.toLowerCase().replace(' ', '-')
                 const targetElement = document.getElementById(targetID)
@@ -42,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.display = 'none'
         })
 
-        fetch(`http://markprettyman95.github.io/phase1-sd2023/db.json`)
+        fetch('db.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok')

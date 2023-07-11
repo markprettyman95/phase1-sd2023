@@ -171,3 +171,10 @@ body {
 .learn-more-btn:hover {
     background-color: #1d1d1d;
 }
+
+.creator-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
