@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
     })
     .then(data => {
+        console.log(data)
         const asanas = data
         const randomIndex = Math.floor(Math.random() * asanas.length)
         const randomAsana = asanas[randomIndex]

@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json()
             })
             .then(data => {
+                console.log(data)
                 const asanas = data
                 asanaCards.innerHTML = ''
     
