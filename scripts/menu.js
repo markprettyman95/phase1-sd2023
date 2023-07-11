@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(data => {
                 console.log(data)
-                const asanas = data
+                const asanas = data.asanas
                 asanaCards.innerHTML = ''
     
                 asanas.forEach(asana => {
