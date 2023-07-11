@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.display = 'none'
         })
 
-        fetch('db.json')
+        fetch('https://markprettyman95.github.io/phase1-sd2023/db.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok')
