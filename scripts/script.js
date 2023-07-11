@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutInfo.classList.toggle('hidden')
     })
 
-    fetch(`http://localhost:3000/asanas`)
+    fetch(`http://markprettyman95.github.io/phase1-sd2023/db.json`)
     .then(response => {
         if (!response.ok) {
             throw new Error ('Network response was not ok');
