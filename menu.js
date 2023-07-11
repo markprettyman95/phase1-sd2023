@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburgerBtn.addEventListener('click', () => {
         toggleMenu()
-    });
+    })
 
     menuButtons.forEach(button => {
         button.addEventListener('click', () => {
