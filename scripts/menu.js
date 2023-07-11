@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (buttonText === 'Asana Directory') {
                 displayAsanas()
             } else if (buttonText === 'About Us') {
+                document.getElementById('asanaCards').innerHTML = ''
+                document.getElementById('index').innerHTML = ''
                 creatorInfo.classList.toggle('hidden')
                 closeMenu()
             } else {
