@@ -109,6 +109,14 @@ body {
     object-fit: fill;
 }
 
+#mantras {
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
 #asanaCards {
     margin: 2rem;
 }

@@ -2,6 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const asanaCards = document.getElementById('asanaCards')
     const aboutBtn = document.getElementById('aboutBtn')
     const aboutInfo = document.getElementById('aboutInfo')
+    const mantrasContainer = document.getElementById('mantras');
+    const mantras = [
+        "Namaste",
+        "Nothing sacrifices your breathing",
+        "Love and honor your body",
+        "Let go of what no longer serves you",
+        "You are your own guru",
+        "The key to happiness is gratitude",
+        "Your soul seeks nourishment",
+        "Yoga is not a work-out, it's a work-in",
+        "Listen to what your body needs",
+        "Be kind to yourself",
+    ]
+
+    let index = 0
+      
+    function displayMantra() {
+        mantrasContainer.textContent = mantras[index]
+        index++
+      
+        if (index === mantras.length) {
+            index = 0;
+        }
+        
+        setTimeout(displayMantra, 5000);
+    }
+      
+    displayMantra()
 
     aboutBtn.addEventListener('click', () => {
         aboutInfo.classList.toggle('hidden')
