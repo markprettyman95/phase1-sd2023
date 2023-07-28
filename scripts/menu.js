@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoOverlay = document.querySelector('.video-overlay')
     const menuButtons = document.querySelectorAll('.menu-button')
     const asanaCards = document.getElementById('asanaCards')
+    const creatorInfo = document.getElementById('creatorInfo')
 
     hamburgerBtn.addEventListener('click', () => {
         toggleMenu()
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleMenu = () => {
         menu.classList.toggle('show')
         videoOverlay.classList.toggle('blur')
-    };
+    }
 
     const closeMenu = () => {
         menu.classList.remove('show')
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const displayAsanas = () => {
+        const searchBar = document.getElementById('searchBar')
         menuButtons.forEach(button => {
             button.style.display = 'none'
         })
@@ -55,56 +57,84 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json()
             })
             .then(data => {
-                console.log(data)
                 const asanas = data.asanas
                 asanaCards.innerHTML = ''
-    
-                asanas.forEach(asana => {
-                    const asanaButton = document.createElement('button')
-                    asanaButton.classList.add('menu-button')
-                    asanaButton.textContent = asana.name
-    
-                    asanaButton.addEventListener('click', () => {
-                        document.getElementById('index').innerHTML = ''
 
-                        const card = document.createElement('div')
-                        card.classList.add('card')
+                const searchAsanas = (searchTerm) => {
+                    return asanas.filter(asana =>
+                        asana.name.toLowerCase().includes(searchTerm.toLowerCase())
+                    )
+                }
 
-                        const h2 = document.createElement('h2')
-                        h2.textContent = asana.name
-                        card.appendChild(h2)
+                const renderFilteredAsanas = (filteredAsanas) => {
+                    menu.innerHTML = ''
+                    asanaCards.innerHTML = ''
+                    renderAsanas(filteredAsanas)
+                }
 
-                        const img = document.createElement('img')
-                        img.src = asana.image
-                        img.classList.add('asana-pic')
-                        card.appendChild(img)
-
-                        const info = document.createElement('p')
-                        info.classList.add('info')
-                        info.textContent = asana.info
-                        card.appendChild(info)
-
-                        const button = document.createElement('button')
-                        button.classList.add('learn-more-btn')
-                        button.id = asana.id
-                        button.textContent = "Let's Do It!"
-                        card.appendChild(button)
-
-                        button.addEventListener('click', () => {
-                            window.open(asana.link, '_blank')
+                searchBar.addEventListener('input', () => {
+                    const searchTerm = searchBar.value.trim()
+                    if (searchTerm === '') {
+                        menuButtons.forEach((button, index) => {
+                            button.style.display = 'block'
                         })
-
-                        document.getElementById('index').appendChild(card)
-
-                        closeMenu()
-                    })
-    
-                    menu.appendChild(asanaButton)
+                        renderAsanas(asanas)
+                    } else {
+                        const filteredAsanas = searchAsanas(searchTerm)
+                        renderFilteredAsanas(filteredAsanas)
+                    }
                 })
+
+                renderAsanas(asanas)
             })
             .catch(error => {
                 console.error('Error:', error)
             })
+    };
+
+    const renderAsanas = (asanas) => {
+        asanas.forEach(asana => {
+            const asanaButton = document.createElement('button')
+            asanaButton.classList.add('menu-button')
+            asanaButton.textContent = asana.name
+
+            asanaButton.addEventListener('click', () => {
+                document.getElementById('index').innerHTML = ''
+
+                const card = document.createElement('div')
+                card.classList.add('card')
+
+                const h2 = document.createElement('h2')
+                h2.textContent = asana.name
+                card.appendChild(h2)
+
+                const img = document.createElement('img')
+                img.src = asana.image
+                img.classList.add('asana-pic')
+                card.appendChild(img)
+
+                const info = document.createElement('p')
+                info.classList.add('info')
+                info.textContent = asana.info
+                card.appendChild(info)
+
+                const button = document.createElement('button')
+                button.classList.add('learn-more-btn')
+                button.id = asana.id
+                button.textContent = "Let's Do It!"
+                card.appendChild(button)
+
+                button.addEventListener('click', () => {
+                    window.open(asana.link, '_blank')
+                })
+
+                document.getElementById('index').appendChild(card)
+
+                closeMenu()
+            })
+
+            menu.appendChild(asanaButton)
+        })
     }
 })
 
