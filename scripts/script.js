@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         aboutInfo.classList.toggle("hidden");
     });
 
-    fetch("db.json")
+    fetch(`http://localhost:3000/asanas`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then((data) => {
             console.log(data);
-            const asanas = data.asanas;
+            const asanas = data;
             const randomIndex = Math.floor(Math.random() * asanas.length);
             const randomAsana = asanas[randomIndex];
 

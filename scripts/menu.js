@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.display = "none";
         });
 
-        fetch("db.json")
+        fetch(`http://localhost:3000/asanas`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link: linkInput.value,
         };
 
-        fetch("db.json", {
+        fetch(`http://localhost:3000/asanas`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
