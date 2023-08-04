@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then((data) => {
-                const asanas = data.asanas;
+                const asanas = data;
                 asanaCards.innerHTML = "";
 
                 const searchAsanas = (searchTerm) => {
