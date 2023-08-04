@@ -195,3 +195,37 @@ body {
     width: auto;
     height: auto;
 }
+
+.asanaForm {
+    text-align: center;
+}
+
+.asana-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.asana-form input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.asana-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.asana-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+

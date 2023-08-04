@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.style.display = "none";
         });
 
-        fetch("https://markprettyman95.github.io/phase1-sd2023/db.json")
+        fetch("db.json")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             link: linkInput.value,
         };
 
-        fetch("https://markprettyman95.github.io/phase1-sd2023/db.json", {
+        fetch("db.json", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
